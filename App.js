@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 import TwitterHome from './components/TwitterHome';
 import TweetDetail from './components/TweetDetail';
+import AddTweetScreen from './components/AddTweetScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -55,6 +56,7 @@ const App = () => {
       <Stack.Navigator>
         <Stack.Screen name="." component={TwitterTab} options={{ headerShown: false }} />
         <Stack.Screen name="TweetDetail" component={TweetDetail} />
+        <Stack.Screen name="AddTweet" component={AddTweetScreen} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
